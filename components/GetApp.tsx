@@ -23,6 +23,7 @@ const GetApp = () => {
               icon="/android.svg"
               variant="btn_dark_green_outline"
               full
+              border='border'
             />
           </div>
         </div>

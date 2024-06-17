@@ -9,7 +9,7 @@ type MenuButtonProps = {
 const   MenuButton = ({ type, icon, title, onClick}: MenuButtonProps) => {
     return (
       <button 
-      className="inline-block cursor-pointer lg:hidden"
+      className="inline-block cursor-pointer lg:hidden bg-white rounded-full p-2"
       type={type}
       onClick={onClick}
       >

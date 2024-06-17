@@ -48,6 +48,7 @@ const Hero = () => {
             title="How we work?" 
             icon="/play.svg"
             variant="btn_white-text" 
+            border='border'
           />
           </div>
         </div>
@@ -56,7 +57,12 @@ const Hero = () => {
             <div className="flex flex-col">
               <div className="flexBetween">
                 <p className="regular-16 text-gray-20">Location</p>
-                <Image src="/close.svg" alt="close" width={24} height={24} />
+                <Image 
+                  src="close.svg"
+                  alt="close-icon"
+                  width={24}
+                  height={24}
+                />
               </div>
               <p className="bold-20 text-white">Aguas Calientes</p>
             </div>
