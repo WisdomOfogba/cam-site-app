@@ -3,15 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS } from "@/constants";
 import Button from "./Button";
-import MenuButton from "./MenuButton";
 import { useState } from "react";
-
-type MenuProps = {
-  onClose: () => void;
-};
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const handleClick = () => {};
 
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
@@ -30,12 +26,15 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="lg:flexCenter hidden">
-        <Button
-          type="button"
-          title="Login"
-          icon="/user.svg"
-          variant="btn_dark_green"
-        />
+        <Link
+          className="flexCenter px-5 py-5 gap-3 rounded-full btn_dark_green w-full"
+          href="/login"
+        >
+          <Image src="/user.svg" alt="login" width={24} height={24} />
+          <label className="bold-60 whitespace-nowrap cursor-pointer">
+            Login
+          </label>
+        </Link>
       </div>
       <div className=" lg:hidden flex flex-1 justify-end items-center">
         <img
@@ -64,12 +63,15 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flexCenter lg:hidden">
-            <Button
-              type="button"
-              title="Login"
-              icon="/user.svg"
-              variant="btn_dark_green"
-            />
+            <Link
+              className="flexCenter px-5 py-5 gap-3 rounded-full btn_dark_green w-full"
+              href="/login"
+            >
+              <Image src="/user.svg" alt="login" width={24} height={24} />
+              <label className="bold-60 whitespace-nowrap cursor-pointer">
+                Login
+              </label>
+            </Link>
           </div>
         </div>
       </div>
